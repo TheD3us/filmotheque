@@ -1,5 +1,6 @@
 package fr.d3us.bo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,6 +15,7 @@ public class Style {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
+	@Column(name="nom", length=0, nullable = false)
 	private String nom;
 
 	public Style() {

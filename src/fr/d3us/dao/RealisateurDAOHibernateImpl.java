@@ -7,7 +7,7 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.transaction.annotation.Transactional;
 
-import fr.d3us.bo.Acteur;
+
 import fr.d3us.bo.Realisateur;
 
 public class RealisateurDAOHibernateImpl implements RealisateurDAO {
@@ -35,6 +35,7 @@ public class RealisateurDAOHibernateImpl implements RealisateurDAO {
 	}
 
 	@Override
+	@Transactional
 	public void delete(int id) {
 		em.createQuery("DELETE FROM realisateur WHERE id = :id")
 		.setParameter("id", id)
